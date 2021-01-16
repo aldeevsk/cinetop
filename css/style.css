@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    color: rgb(138, 29, 29);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    background: rgb(70, 69, 69);
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    width: 1170px;
+    height: 100%;
+}
+
+.df {
+    display: flex;
+}
+
+.ai-center {
+    align-items:center;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+header, footer {
+    width: 100%;
+    height: 60px;
+    background: rgb(153, 153, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(138, 29, 29);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.logo-box {
+    width: 40%;
+    height: 100%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Impact', sans-serif;
+    font-style: italic;
+    stroke: rgb(123, 255, 0);
+}
+.logo a {
+    fill: rgb(138, 29, 29);
+}
+
+.nav {
+    width: 60%;
+}
+
+.nav-item {
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 5px 10px;
+}
+
+.nav-item:hover {
+    border-color:rgb(77, 210, 250);
+}
+.nav-item:hover a{
+    color: rgb(77, 210, 250);
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slider-track {
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition: 0.8s;
+}
+.slider-item {
+    width: 390px;
+}
+
+.slider-control-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+}
+
+.next, .prev {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.prev:hover, .next:hover .slider-control{
+    fill: rgb(123, 255, 0);
+}
+.next {
+    justify-content: flex-end;
+}
+
+.slider-control {
+    width: 47px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* Any */
+#any {
+    height: 600px;
+}
