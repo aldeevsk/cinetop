@@ -26,6 +26,7 @@ body {
     color: #000;
     background: rgb(70, 69, 69);
     row-gap: 10px;
+    user-select: none;
 }
 
 main {
@@ -102,6 +103,23 @@ header, footer {
     color: rgb(77, 210, 250);
 }
 
+#to-up-button {
+    text-transform: uppercase;
+    font-size: 20px;
+    border: 2px solid rgb(77, 210, 250);
+    padding: 5px 10px;
+    position: fixed;
+    right: 8%;
+    bottom: 200px;
+}
+#to-up-button:active{
+    background: rgb(123, 255, 0);
+}
+
+#to-up-button a {
+    color: rgba(85, 202, 238, 0.8);
+}
+
 .slider {
     width: 100%;
     overflow: hidden;
@@ -148,10 +166,54 @@ header, footer {
     font-weight: bold;
 }
 
-/* Collection */
-#collecton {
 
+
+
+/* Collection */
+
+#collecton .container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
 }
+
+        /* Aside */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: #fff;
+    row-gap: 10px;
+}
+aside h2 {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(153, 153, 153);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+aside h2:hover {
+    border-color: rgb(77, 210, 250);
+}
+
+aside h2:active {
+    background: rgb(123, 255, 0);
+}
+
+
+
+aside .card {
+    text-transform: uppercase;
+}
+
+aside span {
+    padding: 10px;
+}
+
 
 .tabs {
     width: 100%;
@@ -182,7 +244,7 @@ header, footer {
 
 .collection-box {
     display: flex;
-    width: 100%;
+    width: 830px;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 10px;
@@ -192,6 +254,7 @@ header, footer {
     width: 270px;
     height: max-content;
     position: relative;
+    cursor: pointer;
 }
 
 .desc {
