@@ -14,6 +14,10 @@ html, body {
     height: 100%;
 }
 
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -59,6 +63,8 @@ header, footer {
     font-weight: bold;
     flex-shrink: 0;
 }
+
+
 .logo-box {
     width: 40%;
     height: 100%;
@@ -87,6 +93,10 @@ header, footer {
 
 .nav-item:hover {
     border-color:rgb(77, 210, 250);
+}
+
+.nav-item:active {
+    background: rgb(123, 255, 0);
 }
 .nav-item:hover a{
     color: rgb(77, 210, 250);
@@ -143,6 +153,33 @@ header, footer {
 
 }
 
+.tabs {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: rgb(153, 153, 153);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.tabs span {
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.tabs span:hover {
+    border-color:rgb(77, 210, 250);
+}
+
+.tabs span:active {
+    background: rgb(123, 255, 0);
+}
+
 .collection-box {
     display: flex;
     width: 100%;
@@ -152,7 +189,40 @@ header, footer {
 }
 
 .collection-box .card {
-    width: 24%;
+    width: 270px;
+    height: max-content;
+    position: relative;
+}
+
+.desc {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px;
+    transition: 0.8s;
+    background: rgba(85, 202, 238, 0.2);
+    color: rgb(255, 255, 255);
+    padding-bottom: 20px;
+}
+
+.desc:hover {
+    background:rgba(85, 202, 238, 0.8);
+}
+
+.desc p {
+    transform: scaleY(0);
+    overflow: hidden;
+    transition: 0.8s;
+    transform-origin: 100% 100%;
+}
+
+.desc:hover p{
+    height: auto;
+    transform: scaleY(1);
 }
 
 .card img {
