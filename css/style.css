@@ -129,6 +129,7 @@ header, footer {
     display: flex;
     height: 100%;
     position: relative;
+    left: 0;
     transition: 0.8s;
 }
 .slider-item {
@@ -206,8 +207,11 @@ aside h2:active {
 
 
 
-aside .card {
+aside .top-card {
     text-transform: uppercase;
+}
+.top-card img {
+    width: 100%;
 }
 
 aside span {
@@ -238,7 +242,7 @@ aside span {
     border-color:rgb(77, 210, 250);
 }
 
-.tabs span:active {
+.tabs span.active {
     background: rgb(123, 255, 0);
 }
 
@@ -255,6 +259,10 @@ aside span {
     height: max-content;
     position: relative;
     cursor: pointer;
+}
+
+.card.disabled {
+    display: none;
 }
 
 .desc {
