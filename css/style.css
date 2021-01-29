@@ -125,18 +125,18 @@ header, footer {
     overflow: hidden;
     position: relative;
 }
-.slider-track {
+.track {
     display: flex;
     height: 100%;
     position: relative;
     left: 0;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 .slider-item {
     width: 390px;
 }
 
-.slider-control-block {
+.controls {
     width: 100%;
     height: 100%;
     display: flex;
@@ -151,16 +151,23 @@ header, footer {
     align-items: center;
     height: 100%;
     margin: 0 10px;
+    padding: 4px 10px;
     cursor: pointer;
 }
-.prev:hover, .next:hover .slider-control{
+.prev:hover, .next:hover {
     fill: rgb(123, 255, 0);
 }
+
+.prev:active .control, .next:active .control{
+    stroke: rgb(255, 0, 149);
+    stroke-width: 1px;
+}
+
 .next {
     justify-content: flex-end;
 }
 
-.slider-control {
+.control {
     width: 47px;
     text-transform: uppercase;
     font-size: 16px;
@@ -261,8 +268,11 @@ aside span {
     cursor: pointer;
 }
 
-.card.disabled {
-    display: none;
+.collection-box .card.active {
+    width: 550px;
+    position: fixed;
+    top: 70px;
+    z-index: 2;
 }
 
 .desc {
@@ -299,3 +309,4 @@ aside span {
 .card img {
     width: 100%;
 }
+
